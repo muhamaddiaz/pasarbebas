@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+.navi {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  .navi-header {
+    display: inline-block;
+    h2 {
+      margin: 15px;
+    }
+  }
+  .navi-menu {
+    display: inline-block;
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+    list-style: none;
+    float: right;
+    li {
+      position: relative;
+      float: left;
+      &:hover .hov-effect {
+        transform: scaleX(1);
+      }
+      .hov-effect {
+        position: absolute;
+        transition-duration: .3s;
+        transform: scaleX(0);
+        transform-origin: center;
+        width: 100%;
+        height: 100%;
+        border-bottom: 5px solid white;
+      }
+      a {
+        font-size: 1.5rem;
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        padding: 20px 25px;
+        color: white;
+        &:active {
+          color: white;
+        }
+        &:hover {
+          color: white;
+          text-decoration: none;
+        }
+        &:visited {
+          color: white;
+        }
+      }
+    }
+  }
+}
